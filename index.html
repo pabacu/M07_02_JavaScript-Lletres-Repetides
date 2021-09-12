@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript M07-02</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div>
+    <cite>Pulsa en el menú de tabuladores para ir al ejercicio que te interese ver.</cite>
+    <br/>
+    <cite>Ejercicio con interface gráfica de usuario. (N3)</cite>
+  </div>
+  <!-- Tab links -->
+  <div class="tab">
+    <button class="tablinks" onclick="openTabs(event, 'ejer-1')">Ejer-1</button>
+    <button class="tablinks" onclick="openTabs(event, 'ejer-2')">Ejer-2</button>
+    <button class="tablinks" onclick="openTabs(event, 'ejer-3')">Ejer-3</button>
+    <button class="tablinks" onclick="openTabs(event, 'ejer-4')">Ejer-4</button>
+    <button class="tablinks" onclick="openTabs(event, 'ejer-N2')">Ejer-N2</button>
+  </div>
+
+  
+  <!-- Tab content -->
+  <div id="ejer-1" class="tabcontent">
+    <h3>ejer-1</h3>
+    <p>Crea un array amb el teu nom on cada posició correspongui a una lletra.
+      Fes un bucle que recorri aquest array i mostri per consola cadascuna de les lletres.</p>
+    <input type="button" value="Ejecutar" onclick="showelements()">
+
+  </div>
+
+  <div id="ejer-2" class="tabcontent">
+    <h3>ejer-2</h3>
+    <p>Al bucle, si la lletra és una vocal imprimeix a la consola: ‘He trobat la VOCAL: __’. </p>
+      <p>Sinó, imprimeix: ‘He trobat la CONSONTANT: __’.</p>
+      <p>Si trobes un número, mostra per pantalla: ‘Els noms de persones no contenen el número: __’</p>
+
+    <input type="button" value="Ejecutar" onclick="showvocalcons()">
+  </div>
+
+  <div id="ejer-3" class="tabcontent">
+    <h3>ejer-3</h3>
+    <p>Emmagatzemar en array les lletres i nombre de vegades que apareixen. Utilitza el mètode map().</p>
+    <input type="button" value="Ejecutar" onclick="countcharacters()">
+  </div>
+
+  <div id="ejer-4" class="tabcontent">
+    <h3>ejer-4</h3>
+    <p>Crea una altra array amb el teu cognom on cada posició correspongui a una lletra.</p>
+    <p>Fusiona els dos arrays en un. A més, afegeix una posició amb un espai buit entre la primera i la segona. És a dir, partim de 'array name i surname i al acabar l’execució només tindrem una que es dirà fullName.</p>
+    <input type="button" value="Ejecutar" onclick="joinStrings()">
+  </div>
+
+  <div id="ejer-N2" class="tabcontent">
+    <h3>ejer-N2</h3>
+    <p>Ajuda: https://www.youtube.com/watch?v=M72lwALYRJU</p>
+    <p>Crea una funció que retorni un array amb tots els email (sense repetir) del següent text:</p>
+    <p>var str = 'Una dirección de correo electrónico es la dirección que utiliza para recibir y enviar correos electrónicos. Se muestra a los destinatarios de sus correos electrónicos para que sepan quién le envió un correo electrónico. Cada dirección de correo electrónico sólo se puede asignar una vez en todo el mundo y, por lo tanto, está disponible exclusivamente para usted. No puede cambiar las direcciones de correo electrónico, pero puede eliminarlas en cualquier momento. Una dirección de correo electrónico consiste en el signo @ (arroba), el nombre de usuario delante y el dominio detrás, por ejemplo, nombre-de-usuario@ionos.es: La parte del dominio depende del dominio bajo el cual se crea la dirección de correo electrónico: en nuestro ejemplo es ionos.es. Esta información varía de proveedor a proveedor, por lo que una parte del dominio también puede ser gmail.com o gmx.es si utiliza una dirección de correo electrónico de estos proveedores. Si ha registrado su propio dominio, por ejemplo, www.el-nombre-de-sus-sueños.es, las direcciones de correo electrónico que configura para el dominio lo tienen como parte del dominio (nombre-de-usuario@el-nombre-de-sus-sueños.es o nombre-de-usuario@el-nombre-de-sus-sueños.ES). El nombre de usuario es la parte de una dirección de correo electrónico que puede seleccionar libremente en la medida de lo posible. Puede, por ejemplo, utilizar su propio nombre o el nombre o departamento de una empresa. Si utiliza una dirección de correo electrónico con un proveedor de correo como gmail.com o gmx.es, es posible que la combinación con la parte del dominio deseada ya esté registrada. En este caso, deberá considerar alternativas para el nombre de usuario de su dirección de correo electrónico. Si utiliza su propio dominio, estas restricciones no se aplican porque sólo usted puede crear direcciones de correo electrónico que coincidan con su propio dominio. En resumen, nombre-de-usuario@ionos.es es un email'; </p>
+    <p>Aviso! este ejercicio puede no cumplir con la norma <a href="http://tools.ietf.org/html/rfc5322" target="_blank"> rfc5322 </a></p> 
+    <p>Camel-case sensitive!</p>
+    <input type="button" value="Ejecutar" onclick="getUniqueEmailsFromString()">
+  </div>
+
+  <div class="result"><code id="code"></code></div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
